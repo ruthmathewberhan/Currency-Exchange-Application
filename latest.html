@@ -1,12 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Currency converter</title>
+    ,
+    <link rel="stylesheet" href="asstes/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
+        integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ=="
+        crossorigin="anonymous" />
+        <style>
+            .hide{
+                display: none !important;
+                
+            }
+            .container{
+                display: block !important;
+            }
+            .load{
+                height: 200px;
+                
+            }
+        </style>
 </head>
+
 <body>
+
+    <!-- Navigation  -->
+    <div class="ui top attached tabular menu">
+        <a class=" item" href="index.html">
+            Latest Rates Conversion
+        </a>
+        <a class="item active" href="latest.html">
+            Latest Currency Rate
+        </a>
+        <div class="right menu">
+            <div class="item">
+                <div class="ui transparent icon input">
+                    <input type="text" placeholder="Search users..." data-np-checked="1">
+                    <i class="search link icon"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h2>Latest currency rate</h2>
+
     <ul id="rates"></ul>
     <script src="asstes/js/latest.js"></script>
 </body>
