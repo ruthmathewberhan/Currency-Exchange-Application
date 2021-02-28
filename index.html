@@ -5,42 +5,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Currency converter</title>
-    ,
+    
     <link rel="stylesheet" href="asstes/css/style.css">
+    <!-- Bootsrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    
+    <link rel="shortcut icon" type="image/svg" href="./asstes/images/cur_icon.png" />
+    
+    <!-- Semantic CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
         integrity="sha512-8bHTC73gkZ7rZ7vpqUQThUDhqcNFyYi2xgDgPDHc+GXVGHXq+xPjynxIopALmOPqzo9JZj0k6OqqewdGO3EsrQ=="
         crossorigin="anonymous" />
+
+    
 </head>
 
 <body>
 
     <!-- Navigation  -->
-    <div class="ui top attached tabular menu">
+    <div class="ui inverted menu grey">
         <a class="active item" href="index.html">
             Latest Rates Conversion
         </a>
         <a class="item" href="latest.html">
             Latest Currency rate
         </a>
-
     </div>
-    <h2>Currency converter</h2>
-    <div>
+    
+    <h2 class="text-center">Currency converter</h2>
+    <div class="text-center">
         <input type="number" placeholder="0.0000">
         <select>
             <!-- <option value="currency">Currency</option> -->
         </select>
-    </div>
-    <span>=
 
-    </span>
-    <div>
+        <div>=</div>
+    </div>
+    
+    <div class="text-center">
         <input type="number" placeholder="0.0000">
         <select>
             <!-- <option value="currency">Currency</option>-->
         </select>
     </div>
    
+     <!-- Bootsrap Javascript -->
+     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
    <!-- custom js -->
    <script src="asstes/js/app.js"></script>
 </body>
