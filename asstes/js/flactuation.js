@@ -7,8 +7,19 @@ $.ajax({
         var rs = "";
         var c = 0;
         for(const r in data.rates){
-           console.log(r)
-    }
+           rs += "<tr>";
+           c += 1 ;
+           rs += "<td>"+c+"</td>";
+           rs += "<td class='country-name'>"+r+"</td>";
+           rs += "<td>"+data.rates[r].start_rate+"</td>";
+           rs += "<td>"+data.rates[r].end_rate+"</td>";
+           rs += "<td>"+data.rates[r].change+"</td>";
+           rs += "<td>"+(data.rates[r].change_pct) * 100 + " %" +"</td>";
+           
+           rs += "</tr>";
+        }
+        
+        document.getElementById("result").innerHTML = rs;
     }
     
 })
