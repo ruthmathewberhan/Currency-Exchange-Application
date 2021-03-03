@@ -1,6 +1,6 @@
 
 $.ajax({
-    url:"https://api.exchangerate.host/fluctuation?start_date=2020-01-01&end_date=2020-01-04&base=ETB",
+    url:"https://api.exchangerate.host/fluctuation?start_date=2020-01-01&end_date=2021-01-04&base=ETB&places=5",
     type:"get",
     
     success:function(data){
