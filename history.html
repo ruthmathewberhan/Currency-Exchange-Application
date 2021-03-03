@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Historical Rates</title>
 
-    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="asstes/css/style.css">
     <!-- Bootsrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     
-    <link rel="shortcut icon" type="image/svg" href="../assets/images/cur_icon.png"/>
+    <link rel="shortcut icon" type="image/svg" href="asstes/images/cur_icon.png"/>
     
     <!-- Semantic CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"
@@ -20,23 +20,28 @@
 </head>
 <body>
     <!-- Navigation  -->
-    <div class="ui inverted menu grey">
-        <a class="active item" href="index.html">
+    <div class="ui inverted menu grey nav_c">
+        <a class="header item h">EthioCurrencies</a>
+        <a class="item" href="index.html">
             Latest Rates Conversion
         </a>
-        <a class="item" href="./latest.html">
+        <a class="item" href="latest.html">
             Latest Currency rate
         </a>
-        <a class="item" href="./history.html">
-           Historical Rates
+        <a class="item" href="graph.html">
+            Currency rate graph
         </a>
+        <a class="active item" href="./history.html">
+            Historical Rates
+         </a>
     </div>
+
     <p class="date font-weight-bold ml-5"></p>
-    <table class="table table-striped w-25">
-        <thead>
+    <table class="table table-striped myTable table-bordered w-25 text-center mx-auto ">
+        <thead class="thead-dark">
             <tr>
-                <th class="col">Country</th>
-                <th class="col">Rate</th>
+                <th class="p-3">Country</th>
+                <th class="p-3">Rate</th>
             </tr>
         </thead>
         <tbody class="res">
@@ -52,6 +57,6 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 
     <!-- custom js -->
-    <script src="../assets/js/history.js"></script>
+    <script src="asstes/js/history.js"></script>
 </body>
 </html>
