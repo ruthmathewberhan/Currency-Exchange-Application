@@ -1,0 +1,15 @@
+{
+	"folders": [
+		{
+			"name": "asstes",
+			"path": "..\\..\\OneDrive\\Currency_Application\\asstes"
+		},
+		{
+			"name": "Currency_Application",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "Currency_Application"
+	}
+}
