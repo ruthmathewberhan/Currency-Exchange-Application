@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 * {
@@ -191,4 +192,105 @@ ul.add-currency-list li span {
   .info .base-currency-rate { margin-left: 3.5rem; }
   ul.add-currency-list { bottom: 48px; height: calc(100vh - 80px - 51px); }
   .add-currency-btn i { left: 25%; top:0.65rem; }
+}
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  html {
+    font-size: 16px;
+  }
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #505562;
+    color: #fff;
+  }
+  .container {
+    width: 500px;
+    margin: 20px auto;
+    user-select: none;
+    overflow-x: hidden;
+    position: relative;
+  }
+  .header {
+    color: rgba(48, 42, 42, 0.548);
+    background-color: #2d2d37;
+    text-align: center;
+    padding: 1.75rem;
+  }
+  .header h1 {
+    font-size: 2.25rem;
+  }
+  .date {
+    color: rgb(78, 97, 97)!important;
+    font-size: 20px;
+    background-color: #222;
+    text-align: right;
+    font-size: 0.75rem;
+    padding: 0.75rem 2rem 0.75rem 0;
+  }
+  .flag {
+    width: 60px;
+    height: 40px;
+    border: 1px solid #fff;
+    vertical-align: top;
+  }
+ 
+  .myTable td {
+    width: 5px;
+  }
+
+  .nav_c {
+    background-color: rgb(78, 97, 97)!important;
+  }
+
+  .nav_c a {
+    padding: 20px!important;
+  }
+
+  .h {
+    font-size: 25px;
+  }
+
+  .cur_s {
+    list-style-type: none;
+  }
+body {
+    background: linear-gradient(0deg, #fff, 50%, #DEEEFE);
+    font-family: 'Rubik', sans-serif;
+    background: #ffffff;
+    height: 100 
+}
+
+.container-fluid {
+    overflow: hidden;
+    margin-top: 250px;
+    background: #262626;
+    color: #627482 !important;
+    margin-bottom: 0;
+    padding-bottom: 0
+}
+
+small {
+    font-size: calc(12px + (15 - 12) * ((100vw - 360px) / (1600 - 360))) !important
+}
+
+.bold-text {
+    color: #989c9e !important
+}
+
+.mt-55 {
+    margin-top: calc(50px + (60 - 50) * ((100vw - 360px) / (1600 - 360))) !important
+}
+
+h3 {
+    font-size: calc(34px + (40 - 34) * ((100vw - 360px) / (1600 - 360))) !important
+}
+
+.social {
+    font-size: 21px !important
+}
+
+.rights {
+    font-size: calc(10px + (12 - 10) * ((100vw - 360px) / (1600 - 360))) !important
 }

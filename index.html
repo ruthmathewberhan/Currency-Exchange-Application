@@ -23,7 +23,9 @@
 <body>
 
     <!-- Navigation  -->
-    <div class="ui inverted menu grey">
+
+    <div class="ui inverted menu grey nav_c">
+        <a class="header item h">EthioCurrencies</a>
         <a class="active item" href="index.html">
             Latest Rates Conversion
         </a>
@@ -33,6 +35,74 @@
         <a class="item" href="graph.html">
             Currency rate graph
         </a>
+
+        <a class="item" href="./history.html">
+            Historical Rates
+         </a>
+
+        <a class="item" href="flactuation.html">
+            FlUctuation Rate
+        </a>
+    </div>
+
+        <div>=</div>
+    </div>
+    
+    <div class="text-center">
+        <input type="number" placeholder="0.0000">
+        <select>
+            <!-- <option value="currency">Currency</option>-->
+        </select>
+    </div>
+
+    <!--      footer-------->
+    <div class="container-fluid pb-0 mb-0 justify-content-center text-light ">
+        <footer>
+            <div class="row my-5 justify-content-center py-5">
+                <div class="col-11">
+                    <div class="row ">
+                        <div class="col-xl-3 col-md-3 col-sm-6 col-12 my-auto mx-auto a">
+                            <h3 class="text-muted mb-md-0 mb-5 bold-text"> ETHIO CURRENCY</h3>
+                        </div>
+                        <div class="col-xl-3 col-md-3 col-sm-6 col-12">
+                            <h6 class="mb-3 mb-lg-4 bold-text "><b>MENU</b></h6>
+                            <ul class="list-unstyled">
+                                <li>
+                                    <a class="active item" href="index.html">
+                                    Latest Rates Conversion
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="item" href="latest.html">
+                                    Latest Currency rate
+                                    </a>
+                                </li>
+                                <li>    
+                                    <a class="item" href="graph.html">
+                                    Currency rate graph
+                                    </a>
+                                </li>
+                                <li>
+                                    <a class="item" href="flactuation.html">
+                                    Flactuation Rate
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-xl-3 col-md-3 col-sm-6 col-12">
+                            <h6 class="mb-3 mb-lg-4 text-muted bold-text mt-sm-0 mt-5"><b>ADDRESS</b></h6>
+                            <p class="mb-1">piassa, Addis Abaa, Ethiopia</p>
+                            <p>Arada, Churchel street</p>
+                        </div>
+                        <div class="col-xl-3 col-md-3 col-sm-6 col-12">
+                            <h6 class="mt-5 mb-3 mb-lg-4 mt-sm-0 text-muted bold-text"><b>BY yeneta group</b></h6><small> <span><i class="fa fa-envelope" aria-hidden="true"></i></span> ethiocurrencypiassa@gmail.com</small>
+                            <p class="social text-muted mb-0 pb-0 bold-text"> <span class="mx-2"><i class="fa fa-facebook" aria-hidden="true"></i></span> <span class="mx-2"><i class="fa fa-linkedin-square" aria-hidden="true"></i></span> <span class="mx-2"><i class="fa fa-twitter" aria-hidden="true"></i></span> <span class="mx-2"><i class="fa fa-instagram" aria-hidden="true"></i></span> </p><small class="rights"><span>&#174;</span> Ethio currency All Rights Reserved.</small>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </footer>
     </div>
 
     <div class="container">
@@ -40,7 +110,7 @@
           <h1>Currency Converter</h1>
         </div>
         <div class="date"></div>
-        <ul class="currencies"></ul>
+        <ul class="currencies cur_s"></ul>
         <button class="add-currency-btn"><i class="fas fa-long-arrow-alt-left"></i>Add Country Currency</button>
         <ul class="add-currency-list"></ul>
       </div>
