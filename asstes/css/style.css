@@ -21,6 +21,7 @@
   }
   .header {
     color: rgba(48, 42, 42, 0.548);
+    background-color: #2d2d37;
     text-align: center;
     padding: 1.75rem;
   }
@@ -30,6 +31,9 @@
   .date {
     color: rgb(78, 97, 97)!important;
     font-size: 20px;
+    background-color: #222;
+    text-align: right;
+    font-size: 0.75rem;
     padding: 0.75rem 2rem 0.75rem 0;
   }
   .flag {
@@ -58,3 +62,4 @@
   .cur_s {
     list-style-type: none;
   }
+

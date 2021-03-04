@@ -329,9 +329,13 @@ function newCurrenciesListItem(currency) {
     currenciesList.insertAdjacentHTML(
         "beforeend",
         `<li class="currency ${currency.abbreviation === baseCurrency ? "base-currency" : ""}" id=${currency.abbreviation}>
+
       <img src=${currency.flagURL} class="flag mt-3">
       <div class="info">
         <p class="input mt-4"><span class="currency-symbol">${currency.symbol}</span><input class="ml-2 p-2" placeholder="0.0000" value=${inputValue}></p>
+      <img src=${currency.flagURL} class="flag">
+      <div class="info">
+        <p class="input"><span class="currency-symbol">${currency.symbol}</span><input placeholder="0.0000" value=${inputValue}></p>
         <p class="currency-name">${currency.abbreviation} - ${currency.name}</p>
         <p class="base-currency-rate">1 ${baseCurrency} = ${exchangeRate} ${currency.abbreviation}</p>
       </div>
@@ -344,6 +348,7 @@ fetch(apiURL)
     .then(res => res.json())
     .then(data => {
         document.querySelector(".date").textContent = data.date.substring(0,11);
+        document.querySelector(".date").textContent = data.date;
         data.rates["ETB"] = 1;
         currencies = currencies.filter(currency => data.rates[currency.abbreviation]);
         currencies.forEach(currency => currency.rate = data.rates[currency.abbreviation]);
