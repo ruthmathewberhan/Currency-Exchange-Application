@@ -1,9 +1,12 @@
-const addCurrencyBtn = document.querySelectorAll(".add-currency-btn");
+// Global Variables
+
+const addCurrencyBtn = document.querySelector(".add-currency-btn");
 const addCurrencyList = document.querySelector(".add-currency-list");
 const currenciesList = document.querySelector(".currencies");
-const apiurl = "https://api.currencyfreaks.com/latest?apikey=52d3089a00c148b9a91b94f0c6297484";
 
-const initiallyDisplayedCurrencies = ["ETB", "USD", "CAD", "CHF", "CNY"];
+const apiURL = "https://api.currencyfreaks.com/latest?apikey=52d3089a00c148b9a91b94f0c6297484";
+
+const initiallyDisplayedCurrencies = ["ETB", "USD", "CAD", "CHF", "CNY","SGD", "HKD"];
 let baseCurrency;
 let baseCurrencyAmount;
 
@@ -98,30 +101,7 @@ let currencies = [
     symbol: "\u006B\u0072",
     flagURL: "http://www.geonames.org/flags/l/no.gif"
   },
-  {
-    name: "South Korean Won",
-    abbreviation: "KRW",
-    symbol: "\u20A9",
-    flagURL: "http://www.geonames.org/flags/l/kr.gif"
-  },
-  {
-    name: "Turkish Lira",
-    abbreviation: "TRY",
-    symbol: "\u20BA",
-    flagURL: "http://www.geonames.org/flags/l/tr.gif"
-  },
-  {
-    name: "Russian Ruble",
-    abbreviation: "RUB",
-    symbol: "\u20BD",
-    flagURL: "http://www.geonames.org/flags/l/ru.gif"
-  },
-  {
-    name: "Indian Rupee",
-    abbreviation: "INR",
-    symbol: "\u20B9",
-    flagURL: "http://www.geonames.org/flags/l/in.gif"
-  },
+
   {
     name: "Brazilian Real",
     abbreviation: "BRL",
@@ -211,7 +191,51 @@ let currencies = [
     abbreviation: "ILS",
     symbol: "\u20AA",
     flagURL: "http://www.geonames.org/flags/l/il.gif"
-  }
+  },
+  {
+    name: "South Korean Won",
+    abbreviation: "KRW",
+    symbol: "\u20A9",
+    flagURL: "http://www.geonames.org/flags/l/kr.gif"
+  },
+  {
+    name: "Turkish Lira",
+    abbreviation: "TRY",
+    symbol: "\u20BA",
+    flagURL: "http://www.geonames.org/flags/l/tr.gif"
+  },
+  {
+    name: "Russian Ruble",
+    abbreviation: "RUB",
+    symbol: "\u20BD",
+    flagURL: "http://www.geonames.org/flags/l/ru.gif"
+  },
+  {
+    name: "Indian Rupee",
+    abbreviation: "INR",
+    symbol: "\u20B9",
+    flagURL: "http://www.geonames.org/flags/l/in.gif"
+  },
 ];
 
+// Event Listeners
 
+addCurrencyBtn.addEventListener("click", addCurrencyBtnClick);
+
+function addCurrencyBtnClick(event) {
+  addCurrencyBtn.classList.toggle("open");
+}
+
+
+
+fetch(apiURL)
+  .then(res => res.json())
+  .then(data => {
+    document.querySelector(".date").textContent = data.date;
+    data.rates["ETB"] = 1;
+    currencies = currencies.filter(currency => data.rates[currency.abbreviation]);
+    currencies.forEach(currency => currency.rate = data.rates[currency.abbreviation]);
+    populateAddCyrrencyList();
+    populateCurrenciesList();
+  })
+  .catch(err => console.log(err));
