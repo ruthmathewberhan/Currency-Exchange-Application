@@ -10,7 +10,7 @@ html {
 }
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: #505562;
+  background-color: #e0e5f0a1;
   color: #fff;
 }
 .container {
@@ -21,7 +21,7 @@ body {
   position: relative;
 }
 .header {
-  background-color: #2d2d37;
+  background-color: rgba(204, 197, 197, 0.897);
   text-align: center;
   padding: 1.75rem;
 }
@@ -29,19 +29,19 @@ body {
   font-size: 2.25rem;
 }
 .date {
-  background-color: #222;
+  background-color: rgb(233, 229, 229);
   text-align: right;
   font-size: 0.75rem;
   padding: 0.75rem 2rem 0.75rem 0;
 }
 ul.currencies {
   height: calc(100vh - 40px - 100px - 40px - 58px);
-  background-color: #222;
+  background-color: rgb(233, 229, 229);
   padding: 0 1.5rem 1rem 1.5rem;
   overflow-y: auto;
 }
 ul.currencies li {
-  background-color: #2d2d37;
+  background-color: rgba(180, 173, 173, 0.527);
   border-radius: 5px;
   list-style: none;
   padding: 1rem 1rem 0.75rem 1rem;
@@ -52,7 +52,7 @@ ul.currencies li:last-child {
   margin-bottom: 0;
 }
 ul.currencies li.base-currency {
-  background-color: #264d73;
+  background-color: #63676b;
 }
 .flag {
   width: 60px;
@@ -143,7 +143,7 @@ ul.add-currency-list li span {
 }
 
 .add-currency-btn {
-  background-color: #00b386;
+  background-color: #000000;
   color: #fff;
   padding: 1rem;
   font-size: 1.2rem;
@@ -166,7 +166,7 @@ ul.add-currency-list li span {
 }
 
 .add-currency-btn.open {
-  background-color: #d9534f;
+  background-color: #524e4e;
 }
 .add-currency-btn.open i {
   opacity: 1;
