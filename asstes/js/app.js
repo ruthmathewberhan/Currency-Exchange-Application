@@ -282,6 +282,15 @@ function currenciesListInputChange(event) {
         });
     }
 }
+
+currenciesList.addEventListener("focusout", currenciesListFocusOut);
+
+function currenciesListFocusOut(event) {
+  const inputValue = event.target.value;
+  if(isNaN(inputValue) || Number(inputValue)===0) event.target.value="";
+  else event.target.value = Number(inputValue).toFixed(4);
+}
+
 fetch(apiURL)
     .then(res => res.json())
     .then(data => {
