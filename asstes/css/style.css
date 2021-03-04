@@ -19,3 +19,18 @@
     overflow-x: hidden;
     position: relative;
   }
+  .header {
+    background-color: #2d2d37;
+    text-align: center;
+    padding: 1.75rem;
+  }
+  .header h1 {
+    font-size: 2.25rem;
+  }
+  .date {
+    background-color: #222;
+    text-align: right;
+    font-size: 0.75rem;
+    padding: 0.75rem 2rem 0.75rem 0;
+  }
+ 
