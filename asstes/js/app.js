@@ -297,6 +297,19 @@ function currenciesListKeyDown(event) {
   if(event.key==="Enter") event.target.blur();
 }
 
+// Auxiliary Functions
+
+function populateAddCyrrencyList() {
+    for(let i=0; i<currencies.length; i++) {
+      addCurrencyList.insertAdjacentHTML(
+        "beforeend", 
+        `<li data-currency=${currencies[i].abbreviation}>
+          <img src=${currencies[i].flagURL} class="flag"><span>${currencies[i].abbreviation} - ${currencies[i].name}</span>
+        </li>`
+      );
+    }
+  }
+  
 fetch(apiURL)
     .then(res => res.json())
     .then(data => {
