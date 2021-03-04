@@ -14,7 +14,7 @@ async function currency() {
 
     // console.log(data);
     arrKeys.map(item => {
-        return (html += `<li class='i'>${item} : ${rates[item]}</li>`);
+        return (html += `<li class='i mt-2'>${item} : ${rates[item]}</li>`);
     });
     ul.innerHTML=html;
     // console.log(html);
