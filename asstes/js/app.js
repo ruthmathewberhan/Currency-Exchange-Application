@@ -291,6 +291,12 @@ function currenciesListFocusOut(event) {
   else event.target.value = Number(inputValue).toFixed(4);
 }
 
+currenciesList.addEventListener("keydown", currenciesListKeyDown);
+
+function currenciesListKeyDown(event) {
+  if(event.key==="Enter") event.target.blur();
+}
+
 fetch(apiURL)
     .then(res => res.json())
     .then(data => {
