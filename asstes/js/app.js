@@ -251,6 +251,16 @@ function currenciesListClick(event) {
   }
 }
 
+function setNewBaseCurrency(newBaseCurrencyLI) {
+    newBaseCurrencyLI.classList.add("base-currency");
+    baseCurrency = newBaseCurrencyLI.id;
+    const baseCurrencyRate = currencies.find(currency => currency.abbreviation===baseCurrency).rate;
+    currenciesList.querySelectorAll(".currency").forEach(currencyLI => {
+      const currencyRate = currencies.find(currency => currency.abbreviation===currencyLI.id).rate;
+      const exchangeRate = currencyLI.id===baseCurrency ? 1 : (currencyRate/baseCurrencyRate).toFixed(4);
+      currencyLI.querySelector(".base-currency-rate").textContent = `1 ${baseCurrency} = ${exchangeRate} ${currencyLI.id}`;
+    });
+  }
 
 fetch(apiURL)
   .then(res => res.json())
