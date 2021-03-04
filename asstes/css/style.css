@@ -60,6 +60,7 @@ h3 {
     position: relative;
   }
   .header {
+    color: rgba(48, 42, 42, 0.548);
     background-color: #2d2d37;
     text-align: center;
     padding: 1.75rem;
@@ -68,6 +69,8 @@ h3 {
     font-size: 2.25rem;
   }
   .date {
+    color: rgb(78, 97, 97)!important;
+    font-size: 20px;
     background-color: #222;
     text-align: right;
     font-size: 0.75rem;
@@ -79,3 +82,24 @@ h3 {
     border: 1px solid #fff;
     vertical-align: top;
   }
+ 
+  .myTable td {
+    width: 5px;
+  }
+
+  .nav_c {
+    background-color: rgb(78, 97, 97)!important;
+  }
+
+  .nav_c a {
+    padding: 20px!important;
+  }
+
+  .h {
+    font-size: 25px;
+  }
+
+  .cur_s {
+    list-style-type: none;
+  }
+
