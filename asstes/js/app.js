@@ -234,7 +234,22 @@ function addCurrencyListClick(event) {
     if(newCurrency) newCurrenciesListItem(newCurrency);
   }
 }
+currenciesList.addEventListener("click", currenciesListClick);
 
+function currenciesListClick(event) {
+  if(event.target.classList.contains("close")) {
+    const parentNode = event.target.parentNode;
+    parentNode.remove();
+    addCurrencyList.querySelector(`[data-currency=${parentNode.id}]`).classList.remove("disabled");
+    if(parentNode.classList.contains("base-currency")) {
+      const newBaseCurrencyLI = currenciesList.querySelector(".currency");
+      if(newBaseCurrencyLI) {
+        setNewBaseCurrency(newBaseCurrencyLI);
+        baseCurrencyAmount = Number(newBaseCurrencyLI.querySelector(".input input").value);
+      }
+    }
+  }
+}
 
 
 fetch(apiURL)
