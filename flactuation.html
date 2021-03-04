@@ -18,9 +18,9 @@
     <link rel="stylesheet" href="./asstes/css/style.css">
 </head>
 <body>
-    <!-- Navigation  -->
-    <div class="ui inverted menu grey">
-        <a class="active item" href="index.html">
+    <div class="ui inverted menu grey nav_c">
+        <a class="header item h">EthioCurrencies</a>
+        <a class="item" href="index.html">
             Latest Rates Conversion
         </a>
         <a class="item" href="latest.html">
@@ -29,32 +29,33 @@
         <a class="item" href="graph.html">
             Currency rate graph
         </a>
+        <a class="item active" href="./flactuation.html">Fluctuation Rates</a>
 
-        <a class="item" href="flactuation.html">
-            Flactuation Rate
-        </a>
+        <a class=" item" href="./history.html">
+            Historical Rates
+         </a>
+    </div>
+
+    <div class="container width">
+        <div id="table">
+            <table class="table table-hover table-striped table-info mx-auto">
+                <thead class="thead-dark ">
+                    <tr>
+                        <th class="py-2"> Number</th>
+                        <th class="py-2">Country Code</th>
+                        <th class="py-2">currency rate in 2020/01/01</th>
+                        <th class="py-2">currency rate in 2021/01/04</th>
+                        <th class="py-2">change</th>
+                        <th class="py-2">change percentage</th>
+                    </tr>
+                </thead>
+                <tbody style="color: black" id="result">
+           
+                </tbody>
+            </table>
+           </div>    
     </div>
     
-    <div id="table">
-        <table class="table table-hover table-striped table-info mx-auto">
-            <thead class="thead-dark">
-                <tr>
-                    <th> number</th>
-                    <th>Country Code</th>
-                    <th>currency rate in 2020/01/01</th>
-                    <th>currency rate in 2021/01/04</th>
-                    <th>change</th>
-                    <th>change percentage</th>
-                </tr>
-            </thead>
-            <tbody id="result">
-       
-            </tbody>
-        </table>
-       </div>
-       
-
-
     <!--      footer-------->
     <div class="container-fluid pb-0 mb-0 justify-content-center text-light ">
         <footer>

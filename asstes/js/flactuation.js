@@ -14,7 +14,7 @@ $.ajax({
            rs += "<td>"+data.rates[r].start_rate+"</td>";
            rs += "<td>"+data.rates[r].end_rate+"</td>";
            rs += "<td>"+data.rates[r].change+"</td>";
-           rs += "<td>"+(data.rates[r].change_pct) * 100 + " %" +"</td>";
+           rs += "<td>"+((data.rates[r].change_pct) * 100).toFixed(2) + " %" +"</td>";
            
            rs += "</tr>";
         }

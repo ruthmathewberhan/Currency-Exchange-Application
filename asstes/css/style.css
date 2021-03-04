@@ -202,7 +202,6 @@ ul.add-currency-list li span {
   }
   body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #505562;
     color: #fff;
   }
   .container {
@@ -271,6 +270,10 @@ body {
     padding-bottom: 0
 }
 
+.width {
+  width: 75%;
+}
+=======
 small {
     font-size: calc(12px + (15 - 12) * ((100vw - 360px) / (1600 - 360))) !important
 }
