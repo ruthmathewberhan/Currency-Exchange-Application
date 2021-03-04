@@ -286,30 +286,36 @@ function currenciesListInputChange(event) {
 currenciesList.addEventListener("focusout", currenciesListFocusOut);
 
 function currenciesListFocusOut(event) {
-  const inputValue = event.target.value;
-  if(isNaN(inputValue) || Number(inputValue)===0) event.target.value="";
-  else event.target.value = Number(inputValue).toFixed(4);
+    const inputValue = event.target.value;
+    if (isNaN(inputValue) || Number(inputValue) === 0) event.target.value = "";
+    else event.target.value = Number(inputValue).toFixed(4);
 }
 
 currenciesList.addEventListener("keydown", currenciesListKeyDown);
 
 function currenciesListKeyDown(event) {
-  if(event.key==="Enter") event.target.blur();
+    if (event.key === "Enter") event.target.blur();
 }
 
 // Auxiliary Functions
 
 function populateAddCyrrencyList() {
-    for(let i=0; i<currencies.length; i++) {
-      addCurrencyList.insertAdjacentHTML(
-        "beforeend", 
-        `<li data-currency=${currencies[i].abbreviation}>
+    for (let i = 0; i < currencies.length; i++) {
+        addCurrencyList.insertAdjacentHTML(
+            "beforeend",
+            `<li data-currency=${currencies[i].abbreviation}>
           <img src=${currencies[i].flagURL} class="flag"><span>${currencies[i].abbreviation} - ${currencies[i].name}</span>
         </li>`
-      );
+        );
     }
-  }
-  
+}
+function populateCurrenciesList() {
+    for (let i = 0; i < initiallyDisplayedCurrencies.length; i++) {
+        const currency = currencies.find(c => c.abbreviation === initiallyDisplayedCurrencies[i]);
+        if (currency) newCurrenciesListItem(currency);
+    }
+}
+
 fetch(apiURL)
     .then(res => res.json())
     .then(data => {
