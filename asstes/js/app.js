@@ -316,6 +316,29 @@ function populateCurrenciesList() {
     }
 }
 
+function newCurrenciesListItem(currency) {
+    if (currenciesList.childElementCount === 0) {
+        baseCurrency = currency.abbreviation;
+        baseCurrencyAmount = 0;
+    }
+    addCurrencyList.querySelector(`[data-currency=${currency.abbreviation}]`).classList.add("disabled");
+    const baseCurrencyRate = currencies.find(c => c.abbreviation === baseCurrency).rate;
+    const exchangeRate = currency.abbreviation === baseCurrency ? 1 : (currency.rate / baseCurrencyRate).toFixed(4);
+    const inputValue = baseCurrencyAmount ? (baseCurrencyAmount * exchangeRate).toFixed(4) : "";
+
+    currenciesList.insertAdjacentHTML(
+        "beforeend",
+        `<li class="currency ${currency.abbreviation === baseCurrency ? "base-currency" : ""}" id=${currency.abbreviation}>
+      <img src=${currency.flagURL} class="flag">
+      <div class="info">
+        <p class="input"><span class="currency-symbol">${currency.symbol}</span><input placeholder="0.0000" value=${inputValue}></p>
+        <p class="currency-name">${currency.abbreviation} - ${currency.name}</p>
+        <p class="base-currency-rate">1 ${baseCurrency} = ${exchangeRate} ${currency.abbreviation}</p>
+      </div>
+      <span class="close">&times;</span>
+    </li>`
+    );
+}
 fetch(apiURL)
     .then(res => res.json())
     .then(data => {
